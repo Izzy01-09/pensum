@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Interactiva Ingeniería Mecánica</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Ingeniería Mecánica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Ingeniería Mecánica - Universidad de Córdoba</h1>
-  <div class="progreso">
-    <p>Créditos aprobados: <span id="creditos-aprobados">0</span> / 166</p>
-    <div class="barra"><div id="barra-progreso"></div></div>
-    <p id="mensaje-saber" class="etiqueta"></p>
-    <p id="mensaje-seminario" class="etiqueta"></p>
-  </div>
-  <div class="semestres-container"></div>
-  <script src="script.js"></script>
+    <header>
+        <h1>🔧 Malla Curricular - Ingeniería Mecánica</h1>
+        <p>Selecciona las materias aprobadas para ver tu progreso</p>
+    </header>
+
+    <main>
+        <div class="progreso-container">
+            <div class="barra-progreso">
+                <div class="progreso" id="barra-progreso"></div>
+            </div>
+            <div class="indicadores-progreso">
+                <span id="creditos-actuales">0</span>/166 créditos (<span id="porcentaje">0%</span>)
+            </div>
+            <div class="hitos">
+                <div class="hito" id="saber-pro-hito">
+                    <div class="punto-hito"></div>
+                    <span>Prueba Saber Pro (75%)</span>
+                </div>
+                <div class="hito" id="seminario-hito">
+                    <div class="punto-hito"></div>
+                    <span>Seminario de Grado (128 créditos)</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="malla-container"></div>
+    </main>
+
+    <div class="controles">
+        <button id="reiniciar-btn">↻ Reiniciar Selección</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
